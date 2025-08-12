@@ -1,4 +1,5 @@
 import hashlib
+import json
 import os
 import logging
 from typing import Optional, List, Dict, Any, Coroutine
@@ -23,15 +24,15 @@ if not settings.WEBHOOK_SECURITY_KEY:
 # --- Простые модели для валидации (убраны лишние поля, можно расширить) ---
 class Person(BaseModel):
     id: int
-    first_name: Optional[str]
-    last_name: Optional[str]
-    email: Optional[str]
+    first_name: Optional[str] = None
+    last_name: Optional[str] = None
+    email: Optional[str] = None
 
 
 class Comment(BaseModel):
     id: Optional[int]
     create_date: Optional[str]
-    text: Optional[str]
+    text: Optional[str] = None
     author: Optional[Person]
 
 
@@ -40,8 +41,8 @@ class TaskModel(BaseModel):
     id: int
     create_date: Optional[str]
     last_modified_date: Optional[str]
-    author: Optional[Person]
-    responsible: Optional[Person]
+    author: Optional[Person] = None
+    responsible: Optional[Person] = None  # Сделать необязательным
     participants: Optional[List[Person]] = []
     comments: Optional[List[Comment]] = []
 
@@ -135,7 +136,8 @@ async def pyrus_webhook(
     """
     raw_body = await request.body()
 
-    print(x_pyrus_sig, raw_body)
+    data = json.loads(raw_body)
+    print(json.dumps(data, ensure_ascii=False, indent=2))
 
     # Проверка User-Agent (рекомендуется)
     if user_agent and not user_agent.startswith("Pyrus-Bot-"):

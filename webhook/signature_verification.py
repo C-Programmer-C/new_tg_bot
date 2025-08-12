@@ -9,6 +9,7 @@ from config import settings
 logging.basicConfig(level=logging.DEBUG)
 
 def verify_signature(header_sig: Optional[str], body: bytes) -> bool:
+
     if not settings.WEBHOOK_SECURITY_KEY:
         logging.warning("No PYRUS_BOT_SECRET configured; skipping signature verification.")
         return False
