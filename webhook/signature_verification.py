@@ -18,8 +18,7 @@ def verify_signature(header_sig: Optional[str], body: bytes) -> bool:
 
 
 
-    mac = hmac.new(settings.WEBHOOK_SECURITY_KEY.encode("utf-8"), body, hashlib.sha1)
-    expected_sig = base64.b64encode(mac.digest()).decode()
+    expected_sig = hmac.new(settings.WEBHOOK_SECURITY_KEY.encode("utf-8"), body, hashlib.sha1).hexdigest()
 
 
     logging.debug(f"Expected signature: {expected_sig}")
