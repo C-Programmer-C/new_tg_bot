@@ -16,7 +16,13 @@ def verify_signature(header_sig: Optional[str], body: bytes) -> bool:
         logging.debug("No signature header provided")
         return False
 
+
+
     mac = hmac.new(settings.WEBHOOK_SECURITY_KEY.encode("utf-8"), body, hashlib.sha1)
     expected_sig = base64.b64encode(mac.digest()).decode()
+
+
+    logging.debug(f"Expected signature: {expected_sig}")
+    logging.debug(f"Received signature: {header_sig}")
 
     return hmac.compare_digest(header_sig, expected_sig)
