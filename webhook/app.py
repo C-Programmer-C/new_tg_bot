@@ -135,6 +135,8 @@ async def pyrus_webhook(
     """
     raw_body = await request.body()
 
+    print(x_pyrus_sig, raw_body)
+
     # Проверка User-Agent (рекомендуется)
     if user_agent and not user_agent.startswith("Pyrus-Bot-"):
         logging.warning("Unexpected User-Agent: %s", user_agent)
