@@ -24,4 +24,4 @@ def verify_signature(header_sig: Optional[str], body: bytes) -> bool:
     logging.debug(f"Expected signature: {expected_sig}")
     logging.debug(f"Received signature: {header_sig}")
 
-    return hmac.compare_digest(header_sig, expected_sig)
+    return hmac.compare_digest(header_sig.lower(), expected_sig.lower())
