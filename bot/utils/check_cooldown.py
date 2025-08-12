@@ -1,6 +1,6 @@
 import time
 from redis.asyncio import Redis
-from bot.config import settings
+from config import settings
 
 
 async def check_cooldown(redis: Redis, cooldown_key: str) -> bool:

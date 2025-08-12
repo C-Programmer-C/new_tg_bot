@@ -14,7 +14,7 @@ from aiogram.types import ReplyKeyboardRemove
 from datetime import datetime, timezone
 from typing import Dict, List, Optional, Union
 
-from ...config import settings
+from config import settings
 from ...states.create_task import CreateTask
 from ...texts.create_task import CreateTaskMessages
 

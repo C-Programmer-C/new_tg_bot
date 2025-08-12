@@ -3,7 +3,7 @@ import json
 import logging
 import aiohttp
 from typing import List, Dict, Optional, Any
-from bot.config import settings
+from config import settings
 from bot.utils.build_payload import build_payload
 from bot.services.pyrus_auth_service import get_valid_token, delete_token_from_cache, \
     save_token_to_cache, fetch_new_token

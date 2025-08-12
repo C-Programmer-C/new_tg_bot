@@ -2,10 +2,8 @@ import logging
 import uuid
 from aiogram import types
 from bot.clients.redis_client import RedisClient
-from bot.config import settings
 from bot.services.file_service import FileService
 from bot.states.add_comment import AddComment
-from bot.texts.create_task import CreateTaskMessages
 from bot.utils.can_reset_files import can_reset_files
 from bot.utils.check_cooldown import check_cooldown
 from bot.utils.delete_keys_from_redis import delete_keys_by_pattern_async

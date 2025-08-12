@@ -1,6 +1,6 @@
 from aiogram import Bot
 from aiogram.client.default import DefaultBotProperties
-from bot.config import settings
+from config import settings
 from typing import Optional
 
 class BotClient:

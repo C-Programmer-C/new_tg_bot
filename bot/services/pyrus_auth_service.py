@@ -4,7 +4,7 @@ from typing import Optional, Dict
 import aiohttp
 import asyncio
 from bot.clients.redis_client import RedisClient
-from bot.config import settings
+from config import settings
 
 # Предполагается, что RedisClient — асинхронный клиент с методами get/set/delete
 # settings — объект с LOGIN, SECURITY_KEY, PERSON_ID

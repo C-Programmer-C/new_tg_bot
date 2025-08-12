@@ -7,7 +7,7 @@ from aiogram.types import BotCommand
 
 from bot.clients.bot_client import BotClient
 from bot.clients.redis_client import RedisClient
-from bot.config import settings
+from config import settings
 from bot.handlers.main_menu import start_router
 from bot.scheduler import periodic_task_fetcher
 from bot.handlers.task_actions import task_actions_router

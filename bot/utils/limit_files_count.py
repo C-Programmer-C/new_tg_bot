@@ -5,7 +5,7 @@ from typing import Callable, Awaitable, Any
 from redis.asyncio import Redis
 
 from bot.clients.redis_client import RedisClient
-from bot.config import settings
+from config import settings
 
 MAX_COUNT_FILES = settings.MAX_COUNT_FILES
 

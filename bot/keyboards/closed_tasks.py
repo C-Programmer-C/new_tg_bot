@@ -1,6 +1,6 @@
 from aiogram.types import InlineKeyboardMarkup
 from aiogram.utils.keyboard import InlineKeyboardBuilder
-from bot.config import settings
+from config import settings
 
 def build_closed_tasks_keyboard(tasks: list) -> InlineKeyboardMarkup:
     builder = InlineKeyboardBuilder()

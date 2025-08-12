@@ -1,5 +1,5 @@
 from aiogram import types
-from bot.config import settings
+from config import settings
 import asyncio
 import io
 import logging

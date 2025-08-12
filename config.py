@@ -16,7 +16,9 @@ class Settings(BaseSettings):
     REDIS_PORT: int = 6379
     REDIS_PASSWORD: str = ""
     REDIS_DB: int = 0
+    PYRUS_IDEMPOTENT_TTL: int
     MAX_COUNT_FILES: int
+    WEBHOOK_SECURITY_KEY: str
     FORM_TASKS_ID: int
     COOLDOWN_SECONDS: int
     DICT_USER_FIELDS_IDS: Optional[Dict]  = {
