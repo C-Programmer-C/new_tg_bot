@@ -11,6 +11,8 @@ from webhook.process_event import process_event
 from redis.exceptions import RedisError
 from fastapi.responses import JSONResponse
 
+from webhook.signature_verification import verify_signature
+
 logging.basicConfig(level=logging.INFO)
 app = FastAPI(title="Pyrus Webhook (FastAPI + Redis idempotency)")
 IDEPT_TTL = settings.PYRUS_IDEMPOTENT_TTL
@@ -93,22 +95,20 @@ async def pyrus_webhook(
     body = await request.body()
     data = json.loads(body)
 
-    # data = json.loads(raw_body)
     # print(json.dumps(data, ensure_ascii=False, indent=2))
 
-    # # Проверка User-Agent (рекомендуется)
-    # if user_agent and not user_agent.startswith("Pyrus-Bot-"):
-    #     logging.warning("Unexpected User-Agent: %s", user_agent)
-    #     # не обязательно отклонять — но можно логировать
-    #
-    # # Проверяем подпись
-    # if settings.WEBHOOK_SECURITY_KEY:
-    #     print(settings.WEBHOOK_SECURITY_KEY)
-    #     if not verify_signature(x_pyrus_sig, raw_body):
-    #         logging.warning("Invalid or missing X-Pyrus-Sig header")
-    #         raise HTTPException(status_code=403, detail="Invalid signature")
+    # Проверка User-Agent (рекомендуется)
+    if user_agent and not user_agent.startswith("Pyrus-Bot-"):
+        logging.warning("Unexpected User-Agent: %s", user_agent)
+        # не обязательно отклонять — но можно логировать
 
-    # Быстрая парсинг/валидация тела
+    # Проверяем подпись
+    if settings.WEBHOOK_SECURITY_KEY:
+        print(settings.WEBHOOK_SECURITY_KEY)
+        if not verify_signature(x_pyrus_sig, body):
+            logging.warning("Invalid or missing X-Pyrus-Sig header")
+            raise HTTPException(status_code=403, detail="Invalid signature")
+
     try:
 
         event = data.get("event")
