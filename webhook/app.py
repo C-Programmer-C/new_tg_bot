@@ -3,56 +3,22 @@ import json
 import os
 import logging
 from typing import Optional, List, Dict, Any, Coroutine
-from fastapi import FastAPI, Request, Header, HTTPException, BackgroundTasks
-from fastapi.responses import JSONResponse
-from pydantic import BaseModel
+from fastapi import FastAPI, Request, Header, HTTPException, BackgroundTasks, status
 from bot.clients.redis_client import RedisClient
 from config import settings
-from webhook.signature_verification import verify_signature
+from webhook.get_user_id import get_cache, find_user_id, save_cache
+from webhook.process_event import process_event
 from redis.exceptions import RedisError
-import time
+from fastapi.responses import JSONResponse
 
 logging.basicConfig(level=logging.INFO)
 app = FastAPI(title="Pyrus Webhook (FastAPI + Redis idempotency)")
-IDEPT_TTL = int(os.getenv("PYRUS_IDEMPOTENT_TTL", str(60 * 60)))
+IDEPT_TTL = settings.PYRUS_IDEMPOTENT_TTL
 
 
 if not settings.WEBHOOK_SECURITY_KEY:
     logging.warning("PYRUS_BOT_SECRET is not set — signature verification will fail.")
 
-
-# --- Простые модели для валидации (убраны лишние поля, можно расширить) ---
-class Person(BaseModel):
-    id: int
-    first_name: Optional[str] = None
-    last_name: Optional[str] = None
-    email: Optional[str] = None
-
-
-class Comment(BaseModel):
-    id: Optional[int]
-    create_date: Optional[str]
-    text: Optional[str] = None
-    author: Optional[Person]
-
-
-class TaskModel(BaseModel):
-    text: Optional[str]
-    id: int
-    create_date: Optional[str]
-    last_modified_date: Optional[str]
-    author: Optional[Person] = None
-    responsible: Optional[Person] = None  # Сделать необязательным
-    participants: Optional[List[Person]] = []
-    comments: Optional[List[Comment]] = []
-
-
-class PyrusEvent(BaseModel):
-    event: str
-    access_token: Optional[str]
-    task_id: int
-    user_id: Optional[int]
-    task: TaskModel
 
 # --- Простая in-memory TTL-кеш для idempotency (per-process). Для продакшна — используйте Redis. ---
 _IDEMPOTENT_TTL = 60 * 60  # seconds to remember processed events
@@ -110,16 +76,6 @@ async def remember_event(event_key: str, ttl: int = IDEPT_TTL) -> Optional[bool]
         return None
 
 
-# --- Обработка события (долго) ---
-async def process_event_long(event: PyrusEvent):
-    """
-    Тяжёлая обработка — например: логика, вызов внешних сервисов, запись в БД, или добавление комментария через API.
-    Это выполняется в BackgroundTasks, чтобы основной эндпоинт вернул 2xx быстро.
-    """
-    logging.info(f"Background processing for task_id={event.task_id}, event={event.event}")
-
-    pass
-
 
 # --- Эндпоинт вебхука ---
 @app.post("/webhook")
@@ -134,62 +90,45 @@ async def pyrus_webhook(
     Обрабатывает входящий POST от Pyrus.
     Проверяет подпись, возвращает 2xx быстро и ставит фоновую задачу для тяжёлой логики.
     """
-    raw_body = await request.body()
+    body = await request.body()
+    data = json.loads(body)
 
-    data = json.loads(raw_body)
-    print(json.dumps(data, ensure_ascii=False, indent=2))
+    # data = json.loads(raw_body)
+    # print(json.dumps(data, ensure_ascii=False, indent=2))
 
-    # Проверка User-Agent (рекомендуется)
-    if user_agent and not user_agent.startswith("Pyrus-Bot-"):
-        logging.warning("Unexpected User-Agent: %s", user_agent)
-        # не обязательно отклонять — но можно логировать
-
-    # Проверяем подпись
-    if settings.WEBHOOK_SECURITY_KEY:
-        print(settings.WEBHOOK_SECURITY_KEY)
-        if not verify_signature(x_pyrus_sig, raw_body):
-            logging.warning("Invalid or missing X-Pyrus-Sig header")
-            raise HTTPException(status_code=403, detail="Invalid signature")
+    # # Проверка User-Agent (рекомендуется)
+    # if user_agent and not user_agent.startswith("Pyrus-Bot-"):
+    #     logging.warning("Unexpected User-Agent: %s", user_agent)
+    #     # не обязательно отклонять — но можно логировать
+    #
+    # # Проверяем подпись
+    # if settings.WEBHOOK_SECURITY_KEY:
+    #     print(settings.WEBHOOK_SECURITY_KEY)
+    #     if not verify_signature(x_pyrus_sig, raw_body):
+    #         logging.warning("Invalid or missing X-Pyrus-Sig header")
+    #         raise HTTPException(status_code=403, detail="Invalid signature")
 
     # Быстрая парсинг/валидация тела
     try:
-        payload = await request.json()
-        event = PyrusEvent.model_validate(payload)
+
+        event = data.get("event")
+        task_id = data.get("task_id")
+
+        cache = await get_cache(task_id)
+        if not cache:
+            cache = await find_user_id(data)
+            await save_cache(task_id, cache, IDEPT_TTL)
+
+        data["user_id"] = cache
+
     except Exception as exc:
         logging.exception("Invalid payload")
         raise HTTPException(status_code=400, detail="Invalid JSON payload")
 
+
     # Логируем попытку (retry)
-    logging.info("Received Pyrus webhook: event=%s task_id=%s retry=%s", event.event, event.task_id, x_pyrus_retry)
+    logging.info("Received Pyrus webhook: event=%s task_id=%s retry=%s", event, task_id, x_pyrus_retry)
 
-    # Идемпотентность: используем комбинацию event+task_id+maybe last comment id
-    # event_key = f"{event.event}:{event.task_id}:{event.task.last_modified_date or ''}"
+    background_tasks.add_task(process_event, data)
 
-    # is_new = await remember_event(event_key)
-
-    # if is_new is None:
-    #     logging.info("Duplicate event detected, skipping heavy processing.")
-    #     raise HTTPException(status_code=503, detail="Redis unavailable")
-    #
-    # if is_new is False:
-    #     return JSONResponse(status_code=200, content={"result": "duplicate"})
-
-    # Добавляем фоновую обработку
-    background_tasks.add_task(process_event_long, event)
-
-    # Быстрый ответ 200: можно сразу вернуть комментарии, если нужно.
-    # Формат ответа: Pyrus принимает JSON с полем "comments" (см. документацию).
-    # Здесь пример простого автоматического комментария, который Pyrus добавит в задачу.
-    response_payload = {
-        "result": "accepted",
-        # Пример: Pyrus позволяет добавить комментарий в теле ответа -> формат зависит от вашей версии API.
-        # Поле ниже — пример, при желании можно удалить и сделать добавление асинхронно через API.
-        "comments": [
-            {
-                "text": "Принял, обрабатываю автоматически (бот).",
-                # "author_id": <id>  # обычно не требуется, т.к. коммент добавляется от бота
-            }
-        ],
-    }
-
-    return None
+    return JSONResponse(status_code=status.HTTP_200_OK, content={})

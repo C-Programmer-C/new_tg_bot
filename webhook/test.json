@@ -1,1 +1,1857 @@
-{"event":"comment","access_token":"vS22AKhZ4CUtdcMKfBMGOX7NzsEJ0WRn-gCetwQv9FXf51x-0eh7kXNfLYPUcu7QuUzA396cwcdrOOa70o6XcLMiwto7wGSk","task_id":1532,"user_id":1725,"task":{"text":"Budget approval","id":11611,"create_date":"2017-08-17T15:32:11Z","last_modified_date":"2017-08-17T15:32:11Z","author":{"id":1731,"first_name":"Bob","last_name":"Smith","email":"Bob.Smith@gmail.com"},"responsible":{"id":1245,"first_name":"my bot","last_name":"","email":"bot@4e83a7da-3ba1-4a16-a1d8-21bbd1ad9592"},"participants":[{"id":1245,"first_name":"my bot","last_name":"","email":"bot@4e83a7da-3ba1-4a16-a1d8-21bbd1ad9592"},{"id":1731,"first_name":"Bob","last_name":"Smith","email":"Bob.Smith@gmail.com"}],"comments":[{"id":13767,"create_date":"2017-08-17T15:32:11Z","text":"Budget approval","author":{"id":1731,"first_name":"Bob","last_name":"Smith","email":"Bob.Smith@gmail.com"},"reassigned_to":{"id":1245,"first_name":"my bot","last_name":"","email":"bot@4e83a7da-3ba1-4a16-a1d8-21bbd1ad9592"},"participants_added":[{"id":1245,"first_name":"my bot","last_name":"","email":"bot@4e83a7da-3ba1-4a16-a1d8-21bbd1ad9592"},{"id":1731,"first_name":"Bob","last_name":"Smith","email":"Bob.Smith@gmail.com"}]}]}}
+{
+    "event": "comment",
+    "access_token": "vS22AKhZ4CUtdcMKfBMGOX7NzsEJ0WRn-gCetwQv9FXf51x-0eh7kXNfLYPUcu7QuUzA396cwcdrOOa70o6XcLMiwto7wGSk",
+    "task_id": 436456544566546,
+    "task": {
+        "id": 300504841,
+        "text": "Копия Обращение клиента для тестов: - Эл. почта",
+        "formatted_text": "Копия Обращение клиента для тестов: - Эл. почта",
+        "create_date": "2025-08-11T22:10:45Z",
+        "last_modified_date": "2025-08-13T09:29:30Z",
+        "author": {
+            "id": 1214351,
+            "first_name": "Тимур",
+            "last_name": "Илясов",
+            "email": "timurilyasov95@gmail.com",
+            "type": "user",
+            "external_id": "",
+            "status": "👍На смене",
+            "banned": false,
+            "messenger": {},
+            "rights": 6143,
+            "web_session_settings": {},
+            "mobile_session_settings": {},
+            "web_session_inactive_settings": {},
+            "mobile_session_inactive_settings": {},
+            "web_session_restriction_settings": {},
+            "mobile_session_restriction_settings": {}
+        },
+        "list_ids": [
+            2338202
+        ],
+        "subscribers": [
+            {
+                "person": {
+                    "id": 1214351,
+                    "first_name": "Тимур",
+                    "last_name": "Илясов",
+                    "email": "timurilyasov95@gmail.com",
+                    "type": "user",
+                    "external_id": "",
+                    "status": "👍На смене",
+                    "banned": false,
+                    "messenger": {},
+                    "rights": 6143,
+                    "web_session_settings": {},
+                    "mobile_session_settings": {},
+                    "web_session_inactive_settings": {},
+                    "mobile_session_inactive_settings": {},
+                    "web_session_restriction_settings": {},
+                    "mobile_session_restriction_settings": {}
+                },
+                "approval_choice": "approved"
+            },
+            {
+                "person": {
+                    "id": 1232744,
+                    "first_name": "Бот",
+                    "last_name": "",
+                    "email": "",
+                    "type": "bot",
+                    "external_id": "",
+                    "banned": false,
+                    "fired": true,
+                    "task_receiver": 1214351,
+                    "messenger": {
+                        "type": "None"
+                    },
+                    "rights": 0,
+                    "web_session_settings": {},
+                    "mobile_session_settings": {},
+                    "web_session_inactive_settings": {},
+                    "mobile_session_inactive_settings": {},
+                    "web_session_restriction_settings": {},
+                    "mobile_session_restriction_settings": {}
+                }
+            }
+        ],
+        "form_id": 2338202,
+        "approvals": [
+            [
+                {
+                    "person": {
+                        "id": 1214351,
+                        "first_name": "Тимур",
+                        "last_name": "Илясов",
+                        "email": "timurilyasov95@gmail.com",
+                        "type": "user",
+                        "external_id": "",
+                        "status": "👍На смене",
+                        "banned": false,
+                        "messenger": {},
+                        "rights": 6143,
+                        "web_session_settings": {},
+                        "mobile_session_settings": {},
+                        "web_session_inactive_settings": {},
+                        "mobile_session_inactive_settings": {},
+                        "web_session_restriction_settings": {},
+                        "mobile_session_restriction_settings": {}
+                    },
+                    "approval_choice": "waiting"
+                }
+            ]
+        ],
+        "current_step": 1,
+        "fields": [
+            {
+                "id": 1,
+                "type": "multiple_choice",
+                "name": "Канал обращения",
+                "tooltip": "",
+                "default_value": "1",
+                "code": "Channel",
+                "value": {
+                    "choice_id": 2,
+                    "choice_ids": [
+                        2
+                    ],
+                    "choice_names": [
+                        "Эл. почта"
+                    ]
+                }
+            },
+            {
+                "id": 2,
+                "type": "note",
+                "name": "Данные Клиента",
+                "tooltip": "Данные Клиента",
+                "visibility_condition": {
+                    "field_id": 0,
+                    "condition_type": 11,
+                    "value": "",
+                    "children": [
+                        {
+                            "field_id": 0,
+                            "condition_type": 11,
+                            "value": "",
+                            "children": [
+                                {
+                                    "field_id": 1,
+                                    "condition_type": 8,
+                                    "value": "4"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "value": "Данные Клиента"
+            },
+            {
+                "id": 3,
+                "type": "form_link",
+                "name": "Пользователь",
+                "tooltip": "",
+                "visibility_condition": {
+                    "field_id": 0,
+                    "condition_type": 11,
+                    "value": "",
+                    "children": [
+                        {
+                            "field_id": 0,
+                            "condition_type": 11,
+                            "value": "",
+                            "children": [
+                                {
+                                    "field_id": 1,
+                                    "condition_type": 8,
+                                    "value": "4"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            {
+                "id": 4,
+                "type": "form_link",
+                "name": "Контрагент",
+                "tooltip": ""
+            },
+            {
+                "id": 5,
+                "type": "text",
+                "name": "Имя отправителя (из письма)",
+                "tooltip": "",
+                "code": "SenderName",
+                "visibility_condition": {
+                    "field_id": 0,
+                    "condition_type": 11,
+                    "value": "5365230223",
+                    "children": [
+                        {
+                            "field_id": 0,
+                            "condition_type": 10,
+                            "value": "",
+                            "children": [
+                                {
+                                    "field_id": 1,
+                                    "condition_type": 5,
+                                    "value": "2"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "value": "5365230223"
+            },
+            {
+                "id": 6,
+                "type": "phone",
+                "name": "Телефон",
+                "tooltip": "",
+                "code": "telephone",
+                "visibility_condition": {
+                    "field_id": 0,
+                    "condition_type": 11,
+                    "value": "",
+                    "children": [
+                        {
+                            "field_id": 0,
+                            "condition_type": 11,
+                            "value": "",
+                            "children": [
+                                {
+                                    "field_id": 1,
+                                    "condition_type": 8,
+                                    "value": "4"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            {
+                "id": 7,
+                "type": "phone",
+                "name": "Телефон 2",
+                "tooltip": "",
+                "visibility_condition": {
+                    "field_id": 0,
+                    "condition_type": 11,
+                    "value": "",
+                    "children": [
+                        {
+                            "field_id": 0,
+                            "condition_type": 11,
+                            "value": "",
+                            "children": [
+                                {
+                                    "field_id": 1,
+                                    "condition_type": 8,
+                                    "value": "4"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            {
+                "id": 8,
+                "type": "email",
+                "name": "Эл. почта",
+                "tooltip": "",
+                "code": "SenderEmail",
+                "visibility_condition": {
+                    "field_id": 0,
+                    "condition_type": 11,
+                    "value": "",
+                    "children": [
+                        {
+                            "field_id": 0,
+                            "condition_type": 11,
+                            "value": "",
+                            "children": [
+                                {
+                                    "field_id": 1,
+                                    "condition_type": 8,
+                                    "value": "4"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            {
+                "id": 9,
+                "type": "text",
+                "name": "Telegram",
+                "tooltip": "Логин в телеграмм, начинается на \"@\"",
+                "code": "TelegramId",
+                "visibility_condition": {
+                    "field_id": 0,
+                    "condition_type": 11,
+                    "value": "",
+                    "children": [
+                        {
+                            "field_id": 0,
+                            "condition_type": 11,
+                            "value": "",
+                            "children": [
+                                {
+                                    "field_id": 1,
+                                    "condition_type": 8,
+                                    "value": "4"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            {
+                "id": 10,
+                "type": "text",
+                "name": "ID Пользователя",
+                "tooltip": "",
+                "code": "id_user"
+            },
+            {
+                "id": 11,
+                "type": "text",
+                "name": "WhatsApp",
+                "tooltip": "Логин в WhatsApp, начинается на \"@\"",
+                "visibility_condition": {
+                    "field_id": 0,
+                    "condition_type": 11,
+                    "value": "",
+                    "children": [
+                        {
+                            "field_id": 0,
+                            "condition_type": 11,
+                            "value": "",
+                            "children": [
+                                {
+                                    "field_id": 1,
+                                    "condition_type": 8,
+                                    "value": "4"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            {
+                "id": 12,
+                "type": "text",
+                "name": "Имя ПК",
+                "tooltip": "Введите имя ПК, номер Anydesk или другую информацию по подключению к рабочему месту",
+                "visibility_condition": {
+                    "field_id": 0,
+                    "condition_type": 11,
+                    "value": "",
+                    "children": [
+                        {
+                            "field_id": 0,
+                            "condition_type": 11,
+                            "value": "",
+                            "children": [
+                                {
+                                    "field_id": 1,
+                                    "condition_type": 8,
+                                    "value": "4"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            {
+                "id": 13,
+                "type": "text",
+                "name": "Примечание",
+                "tooltip": "",
+                "visibility_condition": {
+                    "field_id": 0,
+                    "condition_type": 11,
+                    "value": "",
+                    "children": [
+                        {
+                            "field_id": 0,
+                            "condition_type": 11,
+                            "value": "",
+                            "children": [
+                                {
+                                    "field_id": 1,
+                                    "condition_type": 8,
+                                    "value": "4"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            {
+                "id": 14,
+                "type": "note",
+                "name": "Заявка",
+                "tooltip": "Заявка",
+                "visibility_condition": {
+                    "field_id": 0,
+                    "condition_type": 11,
+                    "value": "",
+                    "children": [
+                        {
+                            "field_id": 0,
+                            "condition_type": 11,
+                            "value": "",
+                            "children": [
+                                {
+                                    "field_id": 1,
+                                    "condition_type": 8,
+                                    "value": "4"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "value": "Заявка"
+            },
+            {
+                "id": 15,
+                "type": "text",
+                "name": "Проблема",
+                "tooltip": "",
+                "code": "Subject"
+            },
+            {
+                "id": 16,
+                "type": "text",
+                "name": "Описание",
+                "tooltip": "",
+                "code": "Message"
+            },
+            {
+                "id": 17,
+                "type": "text",
+                "name": "Имя ПК:",
+                "tooltip": "",
+                "visibility_condition": {
+                    "field_id": 0,
+                    "condition_type": 11,
+                    "value": "",
+                    "children": [
+                        {
+                            "field_id": 0,
+                            "condition_type": 10,
+                            "value": "",
+                            "children": [
+                                {
+                                    "field_id": 1,
+                                    "condition_type": 5,
+                                    "value": "4"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            {
+                "id": 18,
+                "type": "catalog",
+                "name": "Тип заявки",
+                "tooltip": "",
+                "default_value": "168117889",
+                "value": {
+                    "item_id": 168117889,
+                    "item_ids": [
+                        168117889
+                    ],
+                    "headers": [
+                        "Типы заявок"
+                    ],
+                    "values": [
+                        "Задача"
+                    ],
+                    "rows": [
+                        [
+                            "Задача"
+                        ]
+                    ]
+                }
+            },
+            {
+                "id": 19,
+                "type": "catalog",
+                "name": "Тип проблемы",
+                "tooltip": "",
+                "visibility_condition": {
+                    "field_id": 0,
+                    "condition_type": 11,
+                    "value": "",
+                    "children": [
+                        {
+                            "field_id": 0,
+                            "condition_type": 10,
+                            "value": "",
+                            "children": [
+                                {
+                                    "field_id": 18,
+                                    "condition_type": 5,
+                                    "value": "168117889"
+                                }
+                            ]
+                        },
+                        {
+                            "field_id": 0,
+                            "condition_type": 11,
+                            "value": "",
+                            "children": [
+                                {
+                                    "field_id": 1,
+                                    "condition_type": 8,
+                                    "value": "4"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            {
+                "id": 20,
+                "type": "catalog",
+                "name": "Приоритет",
+                "tooltip": "",
+                "default_value": "168194718",
+                "value": {
+                    "item_id": 168194718,
+                    "item_ids": [
+                        168194718
+                    ],
+                    "headers": [
+                        "Приоритет"
+                    ],
+                    "values": [
+                        "В теч. часа"
+                    ],
+                    "rows": [
+                        [
+                            "В теч. часа"
+                        ]
+                    ]
+                }
+            },
+            {
+                "id": 21,
+                "type": "file",
+                "name": "Прикрепленные файлы",
+                "tooltip": "",
+                "code": "Attachments"
+            },
+            {
+                "id": 22,
+                "type": "person",
+                "name": "Ответственный инженер",
+                "tooltip": "",
+                "default_value": "1210836",
+                "code": "ResponsiblePerson",
+                "value": {
+                    "id": 1210836,
+                    "first_name": "",
+                    "last_name": "1-ая линия техподдержки",
+                    "email": "",
+                    "type": "role",
+                    "external_id": "",
+                    "banned": false,
+                    "messenger": {},
+                    "rights": 0,
+                    "web_session_settings": {},
+                    "mobile_session_settings": {},
+                    "web_session_inactive_settings": {},
+                    "mobile_session_inactive_settings": {},
+                    "web_session_restriction_settings": {},
+                    "mobile_session_restriction_settings": {}
+                }
+            },
+            {
+                "id": 23,
+                "type": "checkmark",
+                "name": "Проверка выполнения задач",
+                "tooltip": "",
+                "visibility_condition": {
+                    "field_id": 0,
+                    "condition_type": 11,
+                    "value": "",
+                    "children": [
+                        {
+                            "field_id": 0,
+                            "condition_type": 11,
+                            "value": "",
+                            "children": [
+                                {
+                                    "field_id": 19,
+                                    "condition_type": 8,
+                                    "value": "170275516"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "value": "unchecked"
+            },
+            {
+                "id": 24,
+                "type": "table",
+                "name": "Список задач:",
+                "tooltip": "",
+                "visibility_condition": {
+                    "field_id": 0,
+                    "condition_type": 11,
+                    "value": "",
+                    "children": [
+                        {
+                            "field_id": 23,
+                            "condition_type": 3,
+                            "value": ""
+                        }
+                    ]
+                }
+            },
+            {
+                "id": 27,
+                "type": "table",
+                "name": "Настройка рабочего места оператора КЦ",
+                "tooltip": "",
+                "visibility_condition": {
+                    "field_id": 0,
+                    "condition_type": 11,
+                    "value": "",
+                    "children": [
+                        {
+                            "field_id": 0,
+                            "condition_type": 10,
+                            "value": "",
+                            "children": [
+                                {
+                                    "field_id": 19,
+                                    "condition_type": 5,
+                                    "value": "170275516"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "value": [
+                    {
+                        "row_id": 0
+                    },
+                    {
+                        "row_id": 1
+                    },
+                    {
+                        "row_id": 2
+                    },
+                    {
+                        "row_id": 3
+                    },
+                    {
+                        "row_id": 4
+                    },
+                    {
+                        "row_id": 5
+                    },
+                    {
+                        "row_id": 6
+                    },
+                    {
+                        "row_id": 7
+                    },
+                    {
+                        "row_id": 8
+                    }
+                ]
+            },
+            {
+                "id": 31,
+                "type": "text",
+                "name": "Решение",
+                "tooltip": "",
+                "visibility_condition": {
+                    "field_id": 0,
+                    "condition_type": 11,
+                    "value": "",
+                    "children": [
+                        {
+                            "field_id": 0,
+                            "condition_type": 11,
+                            "value": "",
+                            "children": [
+                                {
+                                    "field_id": 1,
+                                    "condition_type": 8,
+                                    "value": "4"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            {
+                "id": 33,
+                "type": "creation_date",
+                "name": "Дата создания",
+                "tooltip": "",
+                "value": "2025-08-11"
+            },
+            {
+                "id": 34,
+                "type": "due_date_time",
+                "name": "Срок",
+                "tooltip": "",
+                "visibility_condition": {
+                    "field_id": 0,
+                    "condition_type": 11,
+                    "value": "",
+                    "children": [
+                        {
+                            "field_id": 0,
+                            "condition_type": 11,
+                            "value": "",
+                            "children": [
+                                {
+                                    "field_id": 1,
+                                    "condition_type": 8,
+                                    "value": "4"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            {
+                "id": 35,
+                "type": "step",
+                "name": "Этап",
+                "tooltip": "",
+                "value": 1
+            },
+            {
+                "id": 36,
+                "type": "multiple_choice",
+                "name": "Оценка",
+                "tooltip": "",
+                "default_value": "0",
+                "code": "Rating",
+                "visibility_condition": {
+                    "field_id": 0,
+                    "condition_type": 11,
+                    "value": "",
+                    "children": [
+                        {
+                            "field_id": 0,
+                            "condition_type": 11,
+                            "value": "",
+                            "children": [
+                                {
+                                    "field_id": 1,
+                                    "condition_type": 8,
+                                    "value": "4"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            {
+                "id": 37,
+                "type": "text",
+                "name": "Комментарий к оценке",
+                "tooltip": "",
+                "code": "Rating Comment",
+                "visibility_condition": {
+                    "field_id": 0,
+                    "condition_type": 11,
+                    "value": "",
+                    "children": [
+                        {
+                            "field_id": 0,
+                            "condition_type": 11,
+                            "value": "",
+                            "children": [
+                                {
+                                    "field_id": 1,
+                                    "condition_type": 8,
+                                    "value": "4"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            {
+                "id": 38,
+                "type": "date",
+                "name": "Дата оценки",
+                "tooltip": "",
+                "code": "Rating Date",
+                "visibility_condition": {
+                    "field_id": 0,
+                    "condition_type": 11,
+                    "value": "",
+                    "children": [
+                        {
+                            "field_id": 0,
+                            "condition_type": 11,
+                            "value": "",
+                            "children": [
+                                {
+                                    "field_id": 1,
+                                    "condition_type": 8,
+                                    "value": "4"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            {
+                "id": 39,
+                "type": "multiple_choice",
+                "name": "Статус",
+                "tooltip": "",
+                "code": "Status",
+                "value": {
+                    "choice_id": 4,
+                    "choice_ids": [
+                        4
+                    ],
+                    "choice_names": [
+                        "Решена"
+                    ]
+                }
+            },
+            {
+                "id": 40,
+                "type": "multiple_choice",
+                "name": "IsProcessed",
+                "tooltip": "",
+                "default_value": "2",
+                "code": "IsProcessed",
+                "value": {
+                    "choice_id": 2,
+                    "choice_ids": [
+                        2
+                    ],
+                    "choice_names": [
+                        "No"
+                    ]
+                }
+            },
+            {
+                "id": 41,
+                "type": "text",
+                "name": "LastSynchronizedDate",
+                "tooltip": "",
+                "code": "last_synchronized_date"
+            },
+            {
+                "id": 42,
+                "type": "multiple_choice",
+                "name": "MessageFromTelegram",
+                "tooltip": "",
+                "default_value": "2",
+                "code": "IsMessageFromTelegram",
+                "value": {
+                    "choice_id": 2,
+                    "choice_ids": [
+                        2
+                    ],
+                    "choice_names": [
+                        "Нет"
+                    ]
+                }
+            },
+            {
+                "id": 43,
+                "type": "text",
+                "name": "UserData",
+                "tooltip": "",
+                "code": "UserData"
+            },
+            {
+                "id": 44,
+                "type": "checkmark",
+                "name": "IS_POST_COMMENT",
+                "tooltip": "",
+                "code": "is_post_comment",
+                "value": "unchecked"
+            }
+        ],
+        "steps": [
+            {
+                "step": 1,
+                "name": "Заявка",
+                "elapsed_time": 127128384
+            }
+        ],
+        "comments": [
+            {
+                "id": 2588043497,
+                "text": "Копия Обращение клиента для тестов",
+                "formatted_text": "Копия Обращение клиента для тестов",
+                "create_date": "2025-08-11T22:10:45Z",
+                "author": {
+                    "id": 1214351,
+                    "first_name": "Тимур",
+                    "last_name": "Илясов",
+                    "email": "timurilyasov95@gmail.com",
+                    "type": "user",
+                    "external_id": "",
+                    "status": "👍На смене",
+                    "banned": false,
+                    "messenger": {},
+                    "rights": 6143,
+                    "web_session_settings": {},
+                    "mobile_session_settings": {},
+                    "web_session_inactive_settings": {},
+                    "mobile_session_inactive_settings": {},
+                    "web_session_restriction_settings": {},
+                    "mobile_session_restriction_settings": {}
+                },
+                "added_list_ids": [
+                    2338202
+                ],
+                "reassigned_to": {
+                    "id": 1730,
+                    "first_name": "",
+                    "last_name": "Pyrus.com",
+                    "type": "user",
+                    "external_id": "",
+                    "web_session_restriction_settings": {},
+                    "mobile_session_restriction_settings": {}
+                },
+                "field_updates": [
+                    {
+                        "id": 1,
+                        "type": "multiple_choice",
+                        "name": "Канал обращения",
+                        "tooltip": "",
+                        "default_value": "1",
+                        "code": "Channel",
+                        "value": {
+                            "choice_id": 1,
+                            "choice_ids": [
+                                1
+                            ],
+                            "choice_names": [
+                                "Телефон"
+                            ]
+                        }
+                    },
+                    {
+                        "id": 18,
+                        "type": "catalog",
+                        "name": "Тип заявки",
+                        "tooltip": "",
+                        "default_value": "168117889",
+                        "value": {
+                            "item_id": 168117889,
+                            "item_ids": [
+                                168117889
+                            ],
+                            "headers": [
+                                "Типы заявок"
+                            ],
+                            "values": [
+                                "Задача"
+                            ],
+                            "rows": [
+                                [
+                                    "Задача"
+                                ]
+                            ]
+                        }
+                    },
+                    {
+                        "id": 20,
+                        "type": "catalog",
+                        "name": "Приоритет",
+                        "tooltip": "",
+                        "default_value": "168194718",
+                        "value": {
+                            "item_id": 168194718,
+                            "item_ids": [
+                                168194718
+                            ],
+                            "headers": [
+                                "Приоритет"
+                            ],
+                            "values": [
+                                "В теч. часа"
+                            ],
+                            "rows": [
+                                [
+                                    "В теч. часа"
+                                ]
+                            ]
+                        }
+                    },
+                    {
+                        "id": 22,
+                        "type": "person",
+                        "name": "Ответственный инженер",
+                        "tooltip": "",
+                        "default_value": "1210836",
+                        "code": "ResponsiblePerson",
+                        "value": {
+                            "id": 1210836,
+                            "first_name": "",
+                            "last_name": "1-ая линия техподдержки",
+                            "email": "",
+                            "type": "role",
+                            "external_id": "",
+                            "banned": false,
+                            "messenger": {},
+                            "rights": 0,
+                            "web_session_settings": {},
+                            "mobile_session_settings": {},
+                            "web_session_inactive_settings": {},
+                            "mobile_session_inactive_settings": {},
+                            "web_session_restriction_settings": {},
+                            "mobile_session_restriction_settings": {}
+                        }
+                    },
+                    {
+                        "id": 40,
+                        "type": "multiple_choice",
+                        "name": "IsProcessed",
+                        "tooltip": "",
+                        "default_value": "2",
+                        "code": "IsProcessed",
+                        "value": {
+                            "choice_id": 2,
+                            "choice_ids": [
+                                2
+                            ],
+                            "choice_names": [
+                                "No"
+                            ]
+                        }
+                    },
+                    {
+                        "id": 42,
+                        "type": "multiple_choice",
+                        "name": "MessageFromTelegram",
+                        "tooltip": "",
+                        "default_value": "2",
+                        "code": "IsMessageFromTelegram",
+                        "value": {
+                            "choice_id": 2,
+                            "choice_ids": [
+                                2
+                            ],
+                            "choice_names": [
+                                "Нет"
+                            ]
+                        }
+                    },
+                    {
+                        "id": 27,
+                        "type": "table",
+                        "name": "Настройка рабочего места оператора КЦ",
+                        "tooltip": ""
+                    },
+                    {
+                        "id": 39,
+                        "type": "multiple_choice",
+                        "name": "Статус",
+                        "tooltip": "",
+                        "code": "Status",
+                        "value": {
+                            "choice_id": 5,
+                            "choice_ids": [
+                                5
+                            ],
+                            "choice_names": [
+                                "Новая"
+                            ]
+                        }
+                    },
+                    {
+                        "id": 36,
+                        "type": "multiple_choice",
+                        "name": "Оценка",
+                        "tooltip": "",
+                        "default_value": "0",
+                        "code": "Rating",
+                        "value": {
+                            "choice_id": 0,
+                            "choice_ids": [
+                                0
+                            ],
+                            "choice_names": [
+                                "Не выбрано"
+                            ]
+                        }
+                    }
+                ],
+                "approvals_added": [
+                    [
+                        {
+                            "person": {
+                                "id": 1214351,
+                                "first_name": "Тимур",
+                                "last_name": "Илясов",
+                                "email": "timurilyasov95@gmail.com",
+                                "type": "user",
+                                "external_id": "",
+                                "status": "👍На смене",
+                                "banned": false,
+                                "messenger": {},
+                                "rights": 6143,
+                                "web_session_settings": {},
+                                "mobile_session_settings": {},
+                                "web_session_inactive_settings": {},
+                                "mobile_session_inactive_settings": {},
+                                "web_session_restriction_settings": {},
+                                "mobile_session_restriction_settings": {}
+                            },
+                            "step": 1
+                        }
+                    ]
+                ],
+                "subscribers_added": [
+                    {
+                        "id": 1214351,
+                        "first_name": "Тимур",
+                        "last_name": "Илясов",
+                        "email": "timurilyasov95@gmail.com",
+                        "type": "user",
+                        "external_id": "",
+                        "status": "👍На смене",
+                        "banned": false,
+                        "messenger": {},
+                        "rights": 6143,
+                        "web_session_settings": {},
+                        "mobile_session_settings": {},
+                        "web_session_inactive_settings": {},
+                        "mobile_session_inactive_settings": {},
+                        "web_session_restriction_settings": {},
+                        "mobile_session_restriction_settings": {}
+                    },
+                    {
+                        "id": 1232744,
+                        "first_name": "Бот",
+                        "last_name": "",
+                        "email": "",
+                        "type": "bot",
+                        "external_id": "",
+                        "banned": false,
+                        "fired": true,
+                        "task_receiver": 1214351,
+                        "messenger": {
+                            "type": "None"
+                        },
+                        "rights": 0,
+                        "web_session_settings": {},
+                        "mobile_session_settings": {},
+                        "web_session_inactive_settings": {},
+                        "mobile_session_inactive_settings": {},
+                        "web_session_restriction_settings": {},
+                        "mobile_session_restriction_settings": {}
+                    }
+                ]
+            },
+            {
+                "id": 2588043501,
+                "text": "Hello",
+                "formatted_text": "",
+                "create_date": "2025-08-11T22:10:46Z",
+                "author": {
+                    "id": 1232744,
+                    "first_name": "Бот",
+                    "last_name": "",
+                    "email": "",
+                    "type": "bot",
+                    "external_id": "",
+                    "banned": false,
+                    "fired": true,
+                    "task_receiver": 1214351,
+                    "messenger": {
+                        "type": "None"
+                    },
+                    "rights": 0,
+                    "web_session_settings": {},
+                    "mobile_session_settings": {},
+                    "web_session_inactive_settings": {},
+                    "mobile_session_inactive_settings": {},
+                    "web_session_restriction_settings": {},
+                    "mobile_session_restriction_settings": {}
+                }
+            },
+            {
+                "id": 2588669861,
+                "text": "Ботркекеркеркер",
+                "formatted_text": "Ботркекеркеркер",
+                "create_date": "2025-08-12T10:50:59Z",
+                "author": {
+                    "id": 1214351,
+                    "first_name": "Тимур",
+                    "last_name": "Илясов",
+                    "email": "timurilyasov95@gmail.com",
+                    "type": "user",
+                    "external_id": "",
+                    "status": "👍На смене",
+                    "banned": false,
+                    "messenger": {},
+                    "rights": 6143,
+                    "web_session_settings": {},
+                    "mobile_session_settings": {},
+                    "web_session_inactive_settings": {},
+                    "mobile_session_inactive_settings": {},
+                    "web_session_restriction_settings": {},
+                    "mobile_session_restriction_settings": {}
+                }
+            },
+            {
+                "id": 2588669883,
+                "text": "Hello",
+                "formatted_text": "",
+                "create_date": "2025-08-12T10:51:00Z",
+                "author": {
+                    "id": 1232744,
+                    "first_name": "Бот",
+                    "last_name": "",
+                    "email": "",
+                    "type": "bot",
+                    "external_id": "",
+                    "banned": false,
+                    "fired": true,
+                    "task_receiver": 1214351,
+                    "messenger": {
+                        "type": "None"
+                    },
+                    "rights": 0,
+                    "web_session_settings": {},
+                    "mobile_session_settings": {},
+                    "web_session_inactive_settings": {},
+                    "mobile_session_inactive_settings": {},
+                    "web_session_restriction_settings": {},
+                    "mobile_session_restriction_settings": {}
+                }
+            },
+            {
+                "id": 2588673863,
+                "text": "hrhrth",
+                "formatted_text": "<b>hrhrth</b>",
+                "create_date": "2025-08-12T10:53:30Z",
+                "author": {
+                    "id": 1214351,
+                    "first_name": "Тимур",
+                    "last_name": "Илясов",
+                    "email": "timurilyasov95@gmail.com",
+                    "type": "user",
+                    "external_id": "",
+                    "status": "👍На смене",
+                    "banned": false,
+                    "messenger": {},
+                    "rights": 6143,
+                    "web_session_settings": {},
+                    "mobile_session_settings": {},
+                    "web_session_inactive_settings": {},
+                    "mobile_session_inactive_settings": {},
+                    "web_session_restriction_settings": {},
+                    "mobile_session_restriction_settings": {}
+                }
+            },
+            {
+                "id": 2588673886,
+                "text": "Hello",
+                "formatted_text": "",
+                "create_date": "2025-08-12T10:53:31Z",
+                "author": {
+                    "id": 1232744,
+                    "first_name": "Бот",
+                    "last_name": "",
+                    "email": "",
+                    "type": "bot",
+                    "external_id": "",
+                    "banned": false,
+                    "fired": true,
+                    "task_receiver": 1214351,
+                    "messenger": {
+                        "type": "None"
+                    },
+                    "rights": 0,
+                    "web_session_settings": {},
+                    "mobile_session_settings": {},
+                    "web_session_inactive_settings": {},
+                    "mobile_session_inactive_settings": {},
+                    "web_session_restriction_settings": {},
+                    "mobile_session_restriction_settings": {}
+                }
+            },
+            {
+                "id": 2589495101,
+                "create_date": "2025-08-12T22:07:03Z",
+                "author": {
+                    "id": 1214351,
+                    "first_name": "Тимур",
+                    "last_name": "Илясов",
+                    "email": "timurilyasov95@gmail.com",
+                    "type": "user",
+                    "external_id": "",
+                    "status": "👍На смене",
+                    "banned": false,
+                    "messenger": {},
+                    "rights": 6143,
+                    "web_session_settings": {},
+                    "mobile_session_settings": {},
+                    "web_session_inactive_settings": {},
+                    "mobile_session_inactive_settings": {},
+                    "web_session_restriction_settings": {},
+                    "mobile_session_restriction_settings": {}
+                },
+                "field_updates": [
+                    {
+                        "id": 1,
+                        "type": "multiple_choice",
+                        "name": "Канал обращения",
+                        "tooltip": "",
+                        "default_value": "1",
+                        "code": "Channel",
+                        "value": {
+                            "choice_id": 2,
+                            "choice_ids": [
+                                2
+                            ],
+                            "choice_names": [
+                                "Эл. почта"
+                            ]
+                        }
+                    },
+                    {
+                        "id": 5,
+                        "type": "text",
+                        "name": "Имя отправителя (из письма)",
+                        "tooltip": "",
+                        "code": "SenderName",
+                        "value": "32453535"
+                    }
+                ]
+            },
+            {
+                "id": 2589495255,
+                "text": "text",
+                "formatted_text": "",
+                "create_date": "2025-08-12T22:07:30Z",
+                "author": {
+                    "id": 1218282,
+                    "first_name": "Бот-Хелпер",
+                    "last_name": "",
+                    "email": "bot@d6a8668b-75a7-4871-93fc-16e9327d8e56",
+                    "type": "bot",
+                    "external_id": "",
+                    "avatar_id": 122918,
+                    "banned": false,
+                    "messenger": {},
+                    "rights": 8191,
+                    "web_session_settings": {},
+                    "mobile_session_settings": {},
+                    "web_session_inactive_settings": {},
+                    "mobile_session_inactive_settings": {},
+                    "web_session_restriction_settings": {},
+                    "mobile_session_restriction_settings": {}
+                },
+                "field_updates": [
+                    {
+                        "id": 39,
+                        "type": "multiple_choice",
+                        "name": "Статус",
+                        "tooltip": "",
+                        "code": "Status",
+                        "value": {
+                            "choice_id": 6,
+                            "choice_ids": [
+                                6
+                            ],
+                            "choice_names": [
+                                "Запрос информации"
+                            ]
+                        }
+                    }
+                ],
+                "channel": {
+                    "type": "telegram",
+                    "to": {
+                        "name": "32453535"
+                    }
+                }
+            },
+            {
+                "id": 2589987461,
+                "create_date": "2025-08-13T09:24:02Z",
+                "author": {
+                    "id": 1214351,
+                    "first_name": "Тимур",
+                    "last_name": "Илясов",
+                    "email": "timurilyasov95@gmail.com",
+                    "type": "user",
+                    "external_id": "",
+                    "status": "👍На смене",
+                    "banned": false,
+                    "messenger": {},
+                    "rights": 6143,
+                    "web_session_settings": {},
+                    "mobile_session_settings": {},
+                    "web_session_inactive_settings": {},
+                    "mobile_session_inactive_settings": {},
+                    "web_session_restriction_settings": {},
+                    "mobile_session_restriction_settings": {}
+                },
+                "field_updates": [
+                    {
+                        "id": 39,
+                        "type": "multiple_choice",
+                        "name": "Статус",
+                        "tooltip": "",
+                        "code": "Status",
+                        "value": {
+                            "choice_id": 4,
+                            "choice_ids": [
+                                4
+                            ],
+                            "choice_names": [
+                                "Решена"
+                            ]
+                        }
+                    }
+                ],
+                "approval_choice": "approved",
+                "action": "finished"
+            },
+            {
+                "id": 2589987580,
+                "create_date": "2025-08-13T09:24:06Z",
+                "author": {
+                    "id": 1214351,
+                    "first_name": "Тимур",
+                    "last_name": "Илясов",
+                    "email": "timurilyasov95@gmail.com",
+                    "type": "user",
+                    "external_id": "",
+                    "status": "👍На смене",
+                    "banned": false,
+                    "messenger": {},
+                    "rights": 6143,
+                    "web_session_settings": {},
+                    "mobile_session_settings": {},
+                    "web_session_inactive_settings": {},
+                    "mobile_session_inactive_settings": {},
+                    "web_session_restriction_settings": {},
+                    "mobile_session_restriction_settings": {}
+                },
+                "approvals_rerequested": [
+                    [
+                        {
+                            "person": {
+                                "id": 1214351,
+                                "first_name": "Тимур",
+                                "last_name": "Илясов",
+                                "email": "timurilyasov95@gmail.com",
+                                "type": "user",
+                                "external_id": "",
+                                "status": "👍На смене",
+                                "banned": false,
+                                "messenger": {},
+                                "rights": 6143,
+                                "web_session_settings": {},
+                                "mobile_session_settings": {},
+                                "web_session_inactive_settings": {},
+                                "mobile_session_inactive_settings": {},
+                                "web_session_restriction_settings": {},
+                                "mobile_session_restriction_settings": {}
+                            },
+                            "step": 1
+                        }
+                    ]
+                ],
+                "action": "reopened"
+            },
+            {
+                "id": 2589991126,
+                "text": "It's done.",
+                "formatted_text": "",
+                "create_date": "2025-08-13T09:26:24Z",
+                "author": {
+                    "id": 1218282,
+                    "first_name": "Бот-Хелпер",
+                    "last_name": "",
+                    "email": "bot@d6a8668b-75a7-4871-93fc-16e9327d8e56",
+                    "type": "bot",
+                    "external_id": "",
+                    "avatar_id": 122918,
+                    "banned": false,
+                    "messenger": {},
+                    "rights": 8191,
+                    "web_session_settings": {},
+                    "mobile_session_settings": {},
+                    "web_session_inactive_settings": {},
+                    "mobile_session_inactive_settings": {},
+                    "web_session_restriction_settings": {},
+                    "mobile_session_restriction_settings": {}
+                },
+                "action": "finished"
+            },
+            {
+                "id": 2589991416,
+                "text": "It's done.",
+                "formatted_text": "",
+                "create_date": "2025-08-13T09:26:35Z",
+                "author": {
+                    "id": 1218282,
+                    "first_name": "Бот-Хелпер",
+                    "last_name": "",
+                    "email": "bot@d6a8668b-75a7-4871-93fc-16e9327d8e56",
+                    "type": "bot",
+                    "external_id": "",
+                    "avatar_id": 122918,
+                    "banned": false,
+                    "messenger": {},
+                    "rights": 8191,
+                    "web_session_settings": {},
+                    "mobile_session_settings": {},
+                    "web_session_inactive_settings": {},
+                    "mobile_session_inactive_settings": {},
+                    "web_session_restriction_settings": {},
+                    "mobile_session_restriction_settings": {}
+                },
+                "action": "reopened"
+            },
+            {
+                "id": 2589994121,
+                "create_date": "2025-08-13T09:28:14Z",
+                "author": {
+                    "id": 1214351,
+                    "first_name": "Тимур",
+                    "last_name": "Илясов",
+                    "email": "timurilyasov95@gmail.com",
+                    "type": "user",
+                    "external_id": "",
+                    "status": "👍На смене",
+                    "banned": false,
+                    "messenger": {},
+                    "rights": 6143,
+                    "web_session_settings": {},
+                    "mobile_session_settings": {},
+                    "web_session_inactive_settings": {},
+                    "mobile_session_inactive_settings": {},
+                    "web_session_restriction_settings": {},
+                    "mobile_session_restriction_settings": {}
+                },
+                "approval_choice": "approved",
+                "action": "finished"
+            },
+            {
+                "id": 2589994229,
+                "text": "It's done.",
+                "formatted_text": "",
+                "create_date": "2025-08-13T09:28:18Z",
+                "author": {
+                    "id": 1218282,
+                    "first_name": "Бот-Хелпер",
+                    "last_name": "",
+                    "email": "bot@d6a8668b-75a7-4871-93fc-16e9327d8e56",
+                    "type": "bot",
+                    "external_id": "",
+                    "avatar_id": 122918,
+                    "banned": false,
+                    "messenger": {},
+                    "rights": 8191,
+                    "web_session_settings": {},
+                    "mobile_session_settings": {},
+                    "web_session_inactive_settings": {},
+                    "mobile_session_inactive_settings": {},
+                    "web_session_restriction_settings": {},
+                    "mobile_session_restriction_settings": {}
+                },
+                "approvals_rerequested": [
+                    [
+                        {
+                            "person": {
+                                "id": 1214351,
+                                "first_name": "Тимур",
+                                "last_name": "Илясов",
+                                "email": "timurilyasov95@gmail.com",
+                                "type": "user",
+                                "external_id": "",
+                                "status": "👍На смене",
+                                "banned": false,
+                                "messenger": {},
+                                "rights": 6143,
+                                "web_session_settings": {},
+                                "mobile_session_settings": {},
+                                "web_session_inactive_settings": {},
+                                "mobile_session_inactive_settings": {},
+                                "web_session_restriction_settings": {},
+                                "mobile_session_restriction_settings": {}
+                            },
+                            "step": 1
+                        }
+                    ]
+                ],
+                "action": "reopened"
+            },
+            {
+                "id": 2589994594,
+                "create_date": "2025-08-13T09:28:32Z",
+                "author": {
+                    "id": 1214351,
+                    "first_name": "Тимур",
+                    "last_name": "Илясов",
+                    "email": "timurilyasov95@gmail.com",
+                    "type": "user",
+                    "external_id": "",
+                    "status": "👍На смене",
+                    "banned": false,
+                    "messenger": {},
+                    "rights": 6143,
+                    "web_session_settings": {},
+                    "mobile_session_settings": {},
+                    "web_session_inactive_settings": {},
+                    "mobile_session_inactive_settings": {},
+                    "web_session_restriction_settings": {},
+                    "mobile_session_restriction_settings": {}
+                },
+                "approval_choice": "approved",
+                "action": "finished"
+            },
+            {
+                "id": 2589994677,
+                "text": "It's done.",
+                "formatted_text": "",
+                "create_date": "2025-08-13T09:28:35Z",
+                "author": {
+                    "id": 1218282,
+                    "first_name": "Бот-Хелпер",
+                    "last_name": "",
+                    "email": "bot@d6a8668b-75a7-4871-93fc-16e9327d8e56",
+                    "type": "bot",
+                    "external_id": "",
+                    "avatar_id": 122918,
+                    "banned": false,
+                    "messenger": {},
+                    "rights": 8191,
+                    "web_session_settings": {},
+                    "mobile_session_settings": {},
+                    "web_session_inactive_settings": {},
+                    "mobile_session_inactive_settings": {},
+                    "web_session_restriction_settings": {},
+                    "mobile_session_restriction_settings": {}
+                },
+                "approvals_rerequested": [
+                    [
+                        {
+                            "person": {
+                                "id": 1214351,
+                                "first_name": "Тимур",
+                                "last_name": "Илясов",
+                                "email": "timurilyasov95@gmail.com",
+                                "type": "user",
+                                "external_id": "",
+                                "status": "👍На смене",
+                                "banned": false,
+                                "messenger": {},
+                                "rights": 6143,
+                                "web_session_settings": {},
+                                "mobile_session_settings": {},
+                                "web_session_inactive_settings": {},
+                                "mobile_session_inactive_settings": {},
+                                "web_session_restriction_settings": {},
+                                "mobile_session_restriction_settings": {}
+                            },
+                            "step": 1
+                        }
+                    ]
+                ],
+                "action": "reopened"
+            },
+            {
+                "id": 2589995167,
+                "create_date": "2025-08-13T09:28:54Z",
+                "author": {
+                    "id": 1214351,
+                    "first_name": "Тимур",
+                    "last_name": "Илясов",
+                    "email": "timurilyasov95@gmail.com",
+                    "type": "user",
+                    "external_id": "",
+                    "status": "👍На смене",
+                    "banned": false,
+                    "messenger": {},
+                    "rights": 6143,
+                    "web_session_settings": {},
+                    "mobile_session_settings": {},
+                    "web_session_inactive_settings": {},
+                    "mobile_session_inactive_settings": {},
+                    "web_session_restriction_settings": {},
+                    "mobile_session_restriction_settings": {}
+                },
+                "approval_choice": "approved",
+                "action": "finished"
+            },
+            {
+                "id": 2589995383,
+                "text": "It's done.",
+                "formatted_text": "",
+                "create_date": "2025-08-13T09:29:02Z",
+                "author": {
+                    "id": 1218282,
+                    "first_name": "Бот-Хелпер",
+                    "last_name": "",
+                    "email": "bot@d6a8668b-75a7-4871-93fc-16e9327d8e56",
+                    "type": "bot",
+                    "external_id": "",
+                    "avatar_id": 122918,
+                    "banned": false,
+                    "messenger": {},
+                    "rights": 8191,
+                    "web_session_settings": {},
+                    "mobile_session_settings": {},
+                    "web_session_inactive_settings": {},
+                    "mobile_session_inactive_settings": {},
+                    "web_session_restriction_settings": {},
+                    "mobile_session_restriction_settings": {}
+                },
+                "approvals_rerequested": [
+                    [
+                        {
+                            "person": {
+                                "id": 1214351,
+                                "first_name": "Тимур",
+                                "last_name": "Илясов",
+                                "email": "timurilyasov95@gmail.com",
+                                "type": "user",
+                                "external_id": "",
+                                "status": "👍На смене",
+                                "banned": false,
+                                "messenger": {},
+                                "rights": 6143,
+                                "web_session_settings": {},
+                                "mobile_session_settings": {},
+                                "web_session_inactive_settings": {},
+                                "mobile_session_inactive_settings": {},
+                                "web_session_restriction_settings": {},
+                                "mobile_session_restriction_settings": {}
+                            },
+                            "step": 1
+                        }
+                    ]
+                ],
+                "action": "reopened"
+            },
+            {
+                "id": 2589995584,
+                "create_date": "2025-08-13T09:29:09Z",
+                "author": {
+                    "id": 1214351,
+                    "first_name": "Тимур",
+                    "last_name": "Илясов",
+                    "email": "timurilyasov95@gmail.com",
+                    "type": "user",
+                    "external_id": "",
+                    "status": "👍На смене",
+                    "banned": false,
+                    "messenger": {},
+                    "rights": 6143,
+                    "web_session_settings": {},
+                    "mobile_session_settings": {},
+                    "web_session_inactive_settings": {},
+                    "mobile_session_inactive_settings": {},
+                    "web_session_restriction_settings": {},
+                    "mobile_session_restriction_settings": {}
+                },
+                "approval_choice": "approved",
+                "action": "finished"
+            },
+
+                        {
+                "id": 2591461634,
+                "text": "Комментарий",
+                "formatted_text": "Комментарий",
+                "create_date": "2025-08-14T09:23:14Z",
+                "author": {
+                    "id": 1214351,
+                    "first_name": "Тимур",
+                    "last_name": "Илясов",
+                    "email": "timurilyasov95@gmail.com",
+                    "type": "user",
+                    "external_id": "",
+                    "status": "👍На смене",
+                    "banned": false,
+                    "messenger": {},
+                    "rights": 6143,
+                    "web_session_settings": {},
+                    "mobile_session_settings": {},
+                    "web_session_inactive_settings": {},
+                    "mobile_session_inactive_settings": {},
+                    "web_session_restriction_settings": {},
+                    "mobile_session_restriction_settings": {}
+                },
+                "field_updates": [
+                    {
+                        "id": 39,
+                        "type": "multiple_choice",
+                        "name": "Статус",
+                        "tooltip": "",
+                        "code": "Status",
+                        "value": {
+                            "choice_id": 6,
+                            "choice_ids": [
+                                6
+                            ],
+                            "choice_names": [
+                                "Запрос информации"
+                            ]
+                        }
+                    }
+                ],
+                "channel": {
+                    "type": "telegram",
+                    "to": {
+                        "name": "32453535"
+                    }
+                }
+            },
+            {
+                "id": 2591462021,
+                "text": "👍👍👍👍👍преркеркеркрек",
+                "formatted_text": "👍👍👍👍👍преркеркеркрек",
+                "create_date": "2025-08-14T09:23:27Z",
+                "author": {
+                    "id": 1214351,
+                    "first_name": "Тимур",
+                    "last_name": "Илясов",
+                    "email": "timurilyasov95@gmail.com",
+                    "type": "user",
+                    "external_id": "",
+                    "status": "👍На смене",
+                    "banned": false,
+                    "messenger": {},
+                    "rights": 6143,
+                    "web_session_settings": {},
+                    "mobile_session_settings": {},
+                    "web_session_inactive_settings": {},
+                    "mobile_session_inactive_settings": {},
+                    "web_session_restriction_settings": {},
+                    "mobile_session_restriction_settings": {}
+                },
+                "channel": {
+                    "type": "telegram",
+                    "to": {
+                        "name": "32453535"
+                    }
+                }
+            }
+        ],
+        "is_closed": false
+    }
+}

@@ -10,6 +10,8 @@ logging.basicConfig(level=logging.DEBUG)
 
 def verify_signature(header_sig: Optional[str], body: bytes) -> bool:
 
+    print(header_sig)
+
     if not settings.WEBHOOK_SECURITY_KEY:
         logging.warning("No PYRUS_BOT_SECRET configured; skipping signature verification.")
         return False
@@ -22,7 +24,7 @@ def verify_signature(header_sig: Optional[str], body: bytes) -> bool:
     expected_sig = hmac.new(settings.WEBHOOK_SECURITY_KEY.encode("utf-8"), body, hashlib.sha1).hexdigest()
 
 
-    logging.debug(f"Expected signature: {expected_sig}")
-    logging.debug(f"Received signature: {header_sig}")
+    print(f"Expected signature: {expected_sig}")
+    print(f"Received signature: {header_sig}")
 
     return hmac.compare_digest(header_sig.lower(), expected_sig.lower())

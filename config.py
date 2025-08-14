@@ -29,8 +29,9 @@ class Settings(BaseSettings):
         11: "name_pc",
         12: "note",
         9: "whatsapp",
-
 }
+    VALUE_ID: int
+
     @property
     def MAX_FILE_SIZE_MB(self) -> int:
         return 20

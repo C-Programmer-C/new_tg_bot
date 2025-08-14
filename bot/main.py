@@ -4,7 +4,6 @@ from aiogram import Bot, Dispatcher
 from aiogram.fsm.storage.redis import RedisStorage
 from aiogram.fsm.storage.base import DefaultKeyBuilder
 from aiogram.types import BotCommand
-
 from bot.clients.bot_client import BotClient
 from bot.clients.redis_client import RedisClient
 from config import settings
@@ -19,16 +18,20 @@ _periodic_task: asyncio.Task | None = None
 disp = None
 
 async def on_startup():
+    global disp
+    if disp is None:
+        raise RuntimeError("Dispatcher ещё не инициализирован")
+
     print("▶️ on_startup fired")
     # Инициализация Redis и FSM storage
     redis = await RedisClient.get_instance()
     await redis.flushall()
-    disp.fsm_storage = RedisStorage(
+    storage = RedisStorage(
         redis=redis,
         key_builder=DefaultKeyBuilder(with_destiny=True),
     )
-
-    # Установка команд бота через dp.bot
+    disp.fsm_storage = storage
+    BotClient.set_storage(storage)
     bot: Bot = BotClient.get_instance()
     await bot.set_my_commands([
         BotCommand(command="start", description="Запустить бота"),

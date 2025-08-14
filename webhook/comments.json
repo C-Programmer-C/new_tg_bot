@@ -1,0 +1,351 @@
+[
+    {
+        "id": 2591462021,
+        "text": "👍👍👍👍👍преркеркеркрек",
+        "formatted_text": "👍👍👍👍👍преркеркеркрек",
+        "create_date": "2025-08-14T09:23:27Z",
+        "author": {
+            "id": 1214351,
+            "first_name": "Тимур",
+            "last_name": "Илясов",
+            "email": "timurilyasov95@gmail.com",
+            "type": "user",
+            "external_id": "",
+            "status": "👍На смене",
+            "banned": false,
+            "messenger": {},
+            "rights": 6143,
+            "web_session_settings": {},
+            "mobile_session_settings": {},
+            "web_session_inactive_settings": {},
+            "mobile_session_inactive_settings": {},
+            "web_session_restriction_settings": {},
+            "mobile_session_restriction_settings": {}
+        },
+        "channel": {
+            "type": "telegram",
+            "to": {
+                "name": "32453535"
+            }
+        }
+    },
+    {
+        "id": 2591461634,
+        "text": "Комментарий",
+        "formatted_text": "Комментарий",
+        "create_date": "2025-08-14T09:23:14Z",
+        "author": {
+            "id": 1214351,
+            "first_name": "Тимур",
+            "last_name": "Илясов",
+            "email": "timurilyasov95@gmail.com",
+            "type": "user",
+            "external_id": "",
+            "status": "👍На смене",
+            "banned": false,
+            "messenger": {},
+            "rights": 6143,
+            "web_session_settings": {},
+            "mobile_session_settings": {},
+            "web_session_inactive_settings": {},
+            "mobile_session_inactive_settings": {},
+            "web_session_restriction_settings": {},
+            "mobile_session_restriction_settings": {}
+        },
+        "field_updates": [
+            {
+                "id": 39,
+                "type": "multiple_choice",
+                "name": "Статус",
+                "tooltip": "",
+                "code": "Status",
+                "value": {
+                    "choice_id": 6,
+                    "choice_ids": [
+                        6
+                    ],
+                    "choice_names": [
+                        "Запрос информации"
+                    ]
+                }
+            }
+        ],
+        "channel": {
+            "type": "telegram",
+            "to": {
+                "name": "32453535"
+            }
+        }
+    },
+    {
+        "id": 2589995383,
+        "text": "It's done.",
+        "formatted_text": "",
+        "create_date": "2025-08-13T09:29:02Z",
+        "author": {
+            "id": 1218282,
+            "first_name": "Бот-Хелпер",
+            "last_name": "",
+            "email": "bot@d6a8668b-75a7-4871-93fc-16e9327d8e56",
+            "type": "bot",
+            "external_id": "",
+            "avatar_id": 122918,
+            "banned": false,
+            "messenger": {},
+            "rights": 8191,
+            "web_session_settings": {},
+            "mobile_session_settings": {},
+            "web_session_inactive_settings": {},
+            "mobile_session_inactive_settings": {},
+            "web_session_restriction_settings": {},
+            "mobile_session_restriction_settings": {}
+        },
+        "approvals_rerequested": [
+            [
+                {
+                    "person": {
+                        "id": 1214351,
+                        "first_name": "Тимур",
+                        "last_name": "Илясов",
+                        "email": "timurilyasov95@gmail.com",
+                        "type": "user",
+                        "external_id": "",
+                        "status": "👍На смене",
+                        "banned": false,
+                        "messenger": {},
+                        "rights": 6143,
+                        "web_session_settings": {},
+                        "mobile_session_settings": {},
+                        "web_session_inactive_settings": {},
+                        "mobile_session_inactive_settings": {},
+                        "web_session_restriction_settings": {},
+                        "mobile_session_restriction_settings": {}
+                    },
+                    "step": 1
+                }
+            ]
+        ],
+        "action": "reopened"
+    },
+    {
+        "id": 2589994677,
+        "text": "It's done.",
+        "formatted_text": "",
+        "create_date": "2025-08-13T09:28:35Z",
+        "author": {
+            "id": 1218282,
+            "first_name": "Бот-Хелпер",
+            "last_name": "",
+            "email": "bot@d6a8668b-75a7-4871-93fc-16e9327d8e56",
+            "type": "bot",
+            "external_id": "",
+            "avatar_id": 122918,
+            "banned": false,
+            "messenger": {},
+            "rights": 8191,
+            "web_session_settings": {},
+            "mobile_session_settings": {},
+            "web_session_inactive_settings": {},
+            "mobile_session_inactive_settings": {},
+            "web_session_restriction_settings": {},
+            "mobile_session_restriction_settings": {}
+        },
+        "approvals_rerequested": [
+            [
+                {
+                    "person": {
+                        "id": 1214351,
+                        "first_name": "Тимур",
+                        "last_name": "Илясов",
+                        "email": "timurilyasov95@gmail.com",
+                        "type": "user",
+                        "external_id": "",
+                        "status": "👍На смене",
+                        "banned": false,
+                        "messenger": {},
+                        "rights": 6143,
+                        "web_session_settings": {},
+                        "mobile_session_settings": {},
+                        "web_session_inactive_settings": {},
+                        "mobile_session_inactive_settings": {},
+                        "web_session_restriction_settings": {},
+                        "mobile_session_restriction_settings": {}
+                    },
+                    "step": 1
+                }
+            ]
+        ],
+        "action": "reopened"
+    },
+    {
+        "id": 2589994229,
+        "text": "It's done.",
+        "formatted_text": "",
+        "create_date": "2025-08-13T09:28:18Z",
+        "author": {
+            "id": 1218282,
+            "first_name": "Бот-Хелпер",
+            "last_name": "",
+            "email": "bot@d6a8668b-75a7-4871-93fc-16e9327d8e56",
+            "type": "bot",
+            "external_id": "",
+            "avatar_id": 122918,
+            "banned": false,
+            "messenger": {},
+            "rights": 8191,
+            "web_session_settings": {},
+            "mobile_session_settings": {},
+            "web_session_inactive_settings": {},
+            "mobile_session_inactive_settings": {},
+            "web_session_restriction_settings": {},
+            "mobile_session_restriction_settings": {}
+        },
+        "approvals_rerequested": [
+            [
+                {
+                    "person": {
+                        "id": 1214351,
+                        "first_name": "Тимур",
+                        "last_name": "Илясов",
+                        "email": "timurilyasov95@gmail.com",
+                        "type": "user",
+                        "external_id": "",
+                        "status": "👍На смене",
+                        "banned": false,
+                        "messenger": {},
+                        "rights": 6143,
+                        "web_session_settings": {},
+                        "mobile_session_settings": {},
+                        "web_session_inactive_settings": {},
+                        "mobile_session_inactive_settings": {},
+                        "web_session_restriction_settings": {},
+                        "mobile_session_restriction_settings": {}
+                    },
+                    "step": 1
+                }
+            ]
+        ],
+        "action": "reopened"
+    },
+    {
+        "id": 2589991416,
+        "text": "It's done.",
+        "formatted_text": "",
+        "create_date": "2025-08-13T09:26:35Z",
+        "author": {
+            "id": 1218282,
+            "first_name": "Бот-Хелпер",
+            "last_name": "",
+            "email": "bot@d6a8668b-75a7-4871-93fc-16e9327d8e56",
+            "type": "bot",
+            "external_id": "",
+            "avatar_id": 122918,
+            "banned": false,
+            "messenger": {},
+            "rights": 8191,
+            "web_session_settings": {},
+            "mobile_session_settings": {},
+            "web_session_inactive_settings": {},
+            "mobile_session_inactive_settings": {},
+            "web_session_restriction_settings": {},
+            "mobile_session_restriction_settings": {}
+        },
+        "action": "reopened"
+    },
+    {
+        "id": 2589987580,
+        "create_date": "2025-08-13T09:24:06Z",
+        "author": {
+            "id": 1214351,
+            "first_name": "Тимур",
+            "last_name": "Илясов",
+            "email": "timurilyasov95@gmail.com",
+            "type": "user",
+            "external_id": "",
+            "status": "👍На смене",
+            "banned": false,
+            "messenger": {},
+            "rights": 6143,
+            "web_session_settings": {},
+            "mobile_session_settings": {},
+            "web_session_inactive_settings": {},
+            "mobile_session_inactive_settings": {},
+            "web_session_restriction_settings": {},
+            "mobile_session_restriction_settings": {}
+        },
+        "approvals_rerequested": [
+            [
+                {
+                    "person": {
+                        "id": 1214351,
+                        "first_name": "Тимур",
+                        "last_name": "Илясов",
+                        "email": "timurilyasov95@gmail.com",
+                        "type": "user",
+                        "external_id": "",
+                        "status": "👍На смене",
+                        "banned": false,
+                        "messenger": {},
+                        "rights": 6143,
+                        "web_session_settings": {},
+                        "mobile_session_settings": {},
+                        "web_session_inactive_settings": {},
+                        "mobile_session_inactive_settings": {},
+                        "web_session_restriction_settings": {},
+                        "mobile_session_restriction_settings": {}
+                    },
+                    "step": 1
+                }
+            ]
+        ],
+        "action": "reopened"
+    },
+    {
+        "id": 2589495255,
+        "text": "text",
+        "formatted_text": "",
+        "create_date": "2025-08-12T22:07:30Z",
+        "author": {
+            "id": 1218282,
+            "first_name": "Бот-Хелпер",
+            "last_name": "",
+            "email": "bot@d6a8668b-75a7-4871-93fc-16e9327d8e56",
+            "type": "bot",
+            "external_id": "",
+            "avatar_id": 122918,
+            "banned": false,
+            "messenger": {},
+            "rights": 8191,
+            "web_session_settings": {},
+            "mobile_session_settings": {},
+            "web_session_inactive_settings": {},
+            "mobile_session_inactive_settings": {},
+            "web_session_restriction_settings": {},
+            "mobile_session_restriction_settings": {}
+        },
+        "field_updates": [
+            {
+                "id": 39,
+                "type": "multiple_choice",
+                "name": "Статус",
+                "tooltip": "",
+                "code": "Status",
+                "value": {
+                    "choice_id": 6,
+                    "choice_ids": [
+                        6
+                    ],
+                    "choice_names": [
+                        "Запрос информации"
+                    ]
+                }
+            }
+        ],
+        "channel": {
+            "type": "telegram",
+            "to": {
+                "name": "32453535"
+            }
+        }
+    }
+]
