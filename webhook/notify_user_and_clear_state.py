@@ -1,12 +1,6 @@
-# python 3.10+
 from aiogram import Bot
-from aiogram.fsm.storage.base import StorageKey, DefaultKeyBuilder
+from aiogram.fsm.storage.base import StorageKey
 from aiogram.fsm.context import FSMContext
-from aiogram.fsm.storage.redis import RedisStorage
-from aiogram.types import Message
-
-from bot.clients.redis_client import RedisClient
-from bot.main import disp
 from bot.clients.bot_client import BotClient
 import logging
 
@@ -20,8 +14,7 @@ async def notify_user_and_clear_state(user_id: int, new_message_text: str,
     try:
         bot_client = BotClient.get_instance()
         bot: Bot = bot_client
-        redis = await RedisClient.get_instance()
-        storage = RedisStorage(redis=redis, key_builder=DefaultKeyBuilder(with_destiny=True))
+        storage = BotClient.storage
         me = await bot.get_me()
         bot_id = me.id
 
