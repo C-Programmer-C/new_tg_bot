@@ -11,16 +11,13 @@ from bot.clients.bot_client import BotClient
 import logging
 
 async def notify_user_and_clear_state(user_id: int, new_message_text: str,
-                                      forward_from_chat_id: int | None = None,
-                                      forward_message_id: int | None = None):
+                                      message_id: int):
     """
     - user_id: telegram user id (в приватном чате chat_id == user_id)
     - new_message_text: текст, который нужно отправить пользователю
     - если нужно переслать конкретное сообщение, укажи forward_from_chat_id и forward_message_id
     """
     try:
-
-        print("Я запускаюсь!")
         bot_client = BotClient.get_instance()
         bot: Bot = bot_client
         redis = await RedisClient.get_instance()
@@ -32,7 +29,7 @@ async def notify_user_and_clear_state(user_id: int, new_message_text: str,
 
         current_state = await storage.get_state(key=key)  # None или str
 
-
+        print(f"Текущее состояние пользователя с id: {user_id}:\n{current_state}")
 
         if current_state:
             fsm = FSMContext(storage=storage, key=key)
@@ -46,7 +43,7 @@ async def notify_user_and_clear_state(user_id: int, new_message_text: str,
 
 
         await bot.send_message(chat_id=user_id, text=new_message_text)
-        logging.info(f"Сообщение было успешно отправлено пользователю с id: {user_id}")
+        logging.info(f"Сообщение #{message_id} было успешно отправлено пользователю #{user_id}")
 
     except Exception as e:
-        logging.exception(f"Ошибка при отправке сообщения пользователю с id: {user_id}:\n{e}")
+        logging.exception(f"Ошибка при отправке сообщения #{message_id} пользователю #{user_id}:\n{e}")

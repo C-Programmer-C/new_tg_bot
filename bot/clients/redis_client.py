@@ -1,5 +1,3 @@
-from urllib.parse import urlparse
-
 from redis.asyncio import Redis
 import logging
 
