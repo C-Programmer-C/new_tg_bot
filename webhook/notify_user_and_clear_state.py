@@ -29,7 +29,7 @@ async def notify_user_and_clear_state(user_id: int, new_message_text: str,
 
         current_state = await storage.get_state(key=key)  # None или str
 
-        print(f"Текущее состояние пользователя с id: {user_id}:\n{current_state}")
+        logging.info(f"Текущее состояние пользователя с id: {user_id}:\n{current_state}")
 
         if current_state:
             fsm = FSMContext(storage=storage, key=key)
