@@ -32,6 +32,7 @@ async def on_startup():
     )
     disp.fsm_storage = storage
     BotClient.set_storage(storage)
+    print(BotClient.storage)
     bot: Bot = BotClient.get_instance()
     await bot.set_my_commands([
         BotCommand(command="start", description="Запустить бота"),
