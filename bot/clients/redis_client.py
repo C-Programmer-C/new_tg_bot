@@ -12,16 +12,10 @@ class RedisClient:
     async def get_instance(cls) -> Redis:
         if cls._instance is None:
             try:
-                url = 'redis: // red - d2f0hhc9c44c739gk3g0: 6379'
-                parsed_url = urlparse(url)
-                host = parsed_url.hostname
-                port = parsed_url.port
+                url = 'redis://red-d2f0hhc9c44c739gk3g0:6379'
                 # Базовая конфигурация для локального Redis без пароля
-                cls._instance = Redis(
-                    host=host,
-                    port=port,
-                    decode_responses=True
-                )
+                cls._instance = Redis.from_url(url, decode_responses=True)
+
                 if not await cls._instance.ping():
                     raise ConnectionError("Redis ping failed")
                 logger.info("Redis connection established")
