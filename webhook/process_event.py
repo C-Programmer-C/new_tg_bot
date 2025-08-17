@@ -88,7 +88,8 @@ async def worker():
                     logging.info(f"[NEW] {c['id']} сохранён в Redis")
 
                     text = c.get("text")
-                    asyncio.create_task(notify_user_and_clear_state(user_id, text))
+                    message_id = c.get("id")
+                    asyncio.create_task(notify_user_and_clear_state(user_id, text, message_id))
 
                     logging.info(f"[PROCESS] комментарий {c['id']} успешно обработан!")
 
